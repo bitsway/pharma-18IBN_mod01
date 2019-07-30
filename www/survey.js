@@ -1391,15 +1391,18 @@ function module_check(){
 	//x=0
 	
 	if (localStorage.m_order=='YES'){$("#m_order").show()}else{$("#m_order").hide(); }
-	if (localStorage.m_Tour =='YES'){$("#m_Tour").show(); $("#d_plan").show(); }else{$("#m_Tour").hide();$("#d_plan").hide(); }
-	
 	if (localStorage.m_DCR =='YES'){
-			$("#d_save").show(); $("#d_visit").show(); }
+			$("#m_dvisit").show();  }
 		else{
-			$("#m_Tour").hide(); $("#d_plan").hide(); $("#d_save").hide(); $("#d_visit").hide(); }
+			$("#m_Tplan").hide(); $("#m_Tour").hide();  $("#m_dvisit").hide(); }
+	if (localStorage.m_Tour =='YES'){
+		$("#m_Tour").show(); $("#m_Tplan").show();$("#m_dvisit").show();  }
+		else{$("#m_Tour").hide();$("#m_Tplan").hide(); }
+	
+	
 	
 	if (localStorage.m_PrescriptionTeam =='YES'){ $("#rx_button").show(); }else{$("#rx_button").hide(); }
-	if (localStorage.m_Attendance =='YES'){ $("#m_Attendance").show(); }else{$("#m_Attendance").hide(); }
+	//if (localStorage.m_Attendance =='YES'){ $("#m_Attendance").show(); }else{$("#m_Attendance").hide(); }
 	
 	if (localStorage.m_FARM =='YES'){ $("#m_Farm").show(); }else{$("#m_Farm").hide(); }
 	//if (localStorage.m_DistributionInvoicing=='YES'){x=1}
